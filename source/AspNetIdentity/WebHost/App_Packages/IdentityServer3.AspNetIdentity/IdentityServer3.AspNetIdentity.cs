@@ -41,7 +41,7 @@ namespace IdentityServer3.AspNetIdentity
         
         public AspNetIdentityUserService(Microsoft.AspNet.Identity.UserManager<TUser, TKey> userManager, Func<string, TKey> parseSubject = null)
         {
-            if (userManager == null) throw new ArgumentNullException("userManager");
+            if (userManager == null) throw new ArgumentNullException(nameof(userManager));
             
             this.userManager = userManager;
 
